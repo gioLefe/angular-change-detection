@@ -1,0 +1,24 @@
+  <div class="flex flex-col bg-slate-200">
+    Container
+    <div class="flex h-8 mx-4">
+      <p class="flex-1">My children are:</p>
+      <button
+        type="button"
+        class="bg-gray-800 text-gray-100 px-4 border-2 border-gray-100 my-auto"
+        (click)="clearChildren()"
+      >
+        CLEAR
+      </button>
+      <button
+        type="button"
+        class="bg-gray-800 text-gray-100 px-4 border-2 border-gray-100 my-auto"
+        (click)="triggerTimeout()"
+        (mouseover)="appState.addMessage('hover')"
+      >
+        Trigger a timeout from this component
+      </button>
+    </div>
+    @for(child of appState.children(); track $index){
+    <app-child class="m-2 min-w-20 last:mb-4" [name]="child"></app-child>
+    }
+  </div>

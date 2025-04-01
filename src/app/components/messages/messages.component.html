@@ -1,0 +1,15 @@
+<div class="flex mx-4 my-2">
+  <p class="font-bold flex-1">Messages:</p>
+  <button
+    type="button"
+    class="bg-gray-800 text-gray-100 px-4 border-2 border-gray-100"
+    (click)="clearMessages()"
+  >
+    CLEAR
+  </button>
+</div>
+<div class="flex flex-col h-80 max-h-80 overflow-y-scroll">
+  @for(msg of appState.messages();track $index; ) {
+  <div>{{ msg }}</div>
+  }
+</div>

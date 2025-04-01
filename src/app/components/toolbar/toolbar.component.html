@@ -1,0 +1,16 @@
+<div class="flex">
+  <input
+    #childNameText
+    type="text"
+    class="border-3 p-2 bg-white flex-1"
+    placeholder="Name a new child"
+    (keyup)="keyUp($event)"
+  />
+  <button
+    type="button"
+    class="bg-gray-800 text-gray-100 px-4 border-2 border-gray-100"
+    (click)="addChild()"
+  >
+    Add
+  </button>
+</div>
